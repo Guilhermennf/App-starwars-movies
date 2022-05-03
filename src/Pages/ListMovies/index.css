@@ -39,19 +39,3 @@
   font-size: 120%;
   text-align: center;
 }
-
-.star-button {
-  background: #ffff00;
-  border: none;
-  cursor: pointer;
-  border-radius: 1rem;
-  color: black;
-  font-size: 1.1rem;
-  padding: 1.1rem 3.5rem;
-  margin-top: 4rem;
-  transition: all 0.4s;
-}
-
-.star-button:hover {
-  background: #ffff00d0;
-}

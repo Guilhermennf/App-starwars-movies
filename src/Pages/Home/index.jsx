@@ -13,7 +13,7 @@ function Home() {
     if (user === 'admin' && password === 'Admin123!') {
       navigate('/movies');
     } else {
-      return alert('Username or password is invalid! Write again.');
+      alert('Username or password is invalid! Write again.');
     }
   }
 
