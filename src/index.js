@@ -5,6 +5,7 @@ import './global.css';
 import Home from './Pages/Home';
 import AboutMovies from './Pages/AboutMovies';
 import ListMovies from './Pages/ListMovies';
+import NotFound from './Pages/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <Route exact path='/' element={<Home />} />
         <Route path='/movies' element={<ListMovies />} />
         <Route path='/movies/about/:id' element={<AboutMovies />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
