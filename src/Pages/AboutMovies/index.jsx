@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import './index.css';
 
 function AboutMovies() {
   const { id } = useParams();
 
   const [movie, setMovie] = useState({});
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  if (!location.state) {
+    navigate('/');
+  }
 
   useEffect(() => {
     fetch(`https://swapi.dev/api/films/${id}`)

@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
 import titleImage from '../../assets/starwars.png';
 import './index.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function ListMovies() {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  if (!location.state) {
+    navigate('/');
+  }
 
   useEffect(() => {
     fetch('https://swapi.dev/api/films')

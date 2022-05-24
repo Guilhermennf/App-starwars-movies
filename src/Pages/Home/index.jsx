@@ -11,9 +11,13 @@ function Home() {
   function handleValidateLogin(e) {
     e.preventDefault();
     if (user === 'admin' && password === 'Admin123!') {
-      navigate('/movies');
+      navigate('/movies', {
+        state: {
+          authenticated: 'token',
+        },
+      });
     } else {
-      alert('Username or password is invalid! Write again.');
+      alert('Username or password is invalid! Type again.');
     }
   }
 
@@ -29,7 +33,7 @@ function Home() {
             type='text'
             className='h-textfield'
             name='user'
-            placeholder='Write here'
+            placeholder='Type here'
             value={user}
             onInput={(e) => setUser(e.target.value)}
           />
