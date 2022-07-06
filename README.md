@@ -34,4 +34,4 @@ Neste projeto, ao fazer login com o usuário e senha correto, o usuário será r
 usename: admin
 password: Admin123!
 
-Link: https://starwars-one.vercel.app/
+Link do deploy: https://starwars-one.vercel.app/
